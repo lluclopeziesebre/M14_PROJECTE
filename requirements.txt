@@ -1,0 +1,12 @@
+shodan 
+bs4
+telegram
+python-telegram-bot
+sherlock-project 
+httpx
+holehe
+instaloader
+sublist3r
+aiohttp_socks
+tk
+ttkbootstrap
