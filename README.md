@@ -25,8 +25,62 @@
 
 Aquest projecte inclou una eina principal per a l'automatització d'auditories, desenvolupada en Python 3 i desplegable amb Docker. Està disponible tant en mode gràfic com en consola per oferir més comoditat a l'usuari.
 
-Aqui podem observar l'aspecte de l'aplicació amb interfície gràfica:
-<p align="center"><img src="Imatges/2025-03-10 17-25-23.png"></p> 
+Per instal·lar aquest projecte seguiu aquests passos:
+1. Clonar el repositori
+```console
+$ sudo git clone https://github.com/lluclopeziesebre/M14_PROJECTE
+Clonando en 'M14_PROJECTE'...
+remote: Enumerating objects: 49, done.
+remote: Counting objects: 100% (49/49), done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 49 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+Recibiendo objetos: 100% (49/49), 1.61 MiB | 6.38 MiB/s, listo.
+Resolviendo deltas: 100% (4/4), listo.
+```
+2. Donar permisos d'execució al script `run_tool.sh` 
+```console
+$ cd M14_PROJECTE/
+
+~/M14_PROJECTE$ ls
+Dockerfile  Imatges  README.md  requirements.txt  run_tool.sh  script3.py
+
+~/M14_PROJECTE$ sudo chmod +x run_tool.sh
+
+~/M14_PROJECTE$ ls -lh run_tool.sh 
+-rwxr-xr-x 1 root root 1,3K mar 10 20:24 run_tool.sh
+```
+3. Executar el script `run_tool.sh`
+```console
+$ ~/M14_PROJECTE$ sudo bash run_tool.sh 
+[*] Construint la imatge de Docker...
+[+] Building 185.1s (16/16) FINISHED                             docker:default
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 1.44kB                                     0.0s
+ => [internal] load metadata for docker.io/library/python:3.11-slim        0.5s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [ 1/11] FROM docker.io/library/python:3.11-slim@sha256:614c8691ab7415  0.0s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 3.64kB                                        0.0s
+ => CACHED [ 2/11] WORKDIR /app                                            0.0s
+ => CACHED [ 3/11] RUN apt-get update && apt-get install -y     git whois  0.0s
+ => [ 4/11] COPY . /app/                                                   0.2s
+ => [ 5/11] RUN git clone https://github.com/portcullislabs/enum4linux.g  18.2s
+ => [ 6/11] RUN git clone https://github.com/s0md3v/Photon.git /app/Photo  1.3s 
+ => [ 7/11] RUN rm -rf /app/theHarvester && git clone https://github.com/  6.3s 
+ => [ 8/11] RUN pip install --no-cache-dir --upgrade pip setuptools wheel  6.9s 
+ => [ 9/11] RUN pip install --no-cache-dir -r /app/requirements.txt       89.1s 
+ => [10/11] RUN pip install --no-cache-dir -r /app/Photon/requirements.tx  1.7s 
+ => [11/11] RUN pip install --no-cache-dir -r /app/theHarvester/requirem  58.8s 
+ => exporting to image                                                     1.9s 
+ => => exporting layers                                                    1.9s 
+ => => writing image sha256:0b5e69510416b21ed3602ef733d8b9b66c8b8912688ec  0.0s 
+ => => naming to docker.io/library/projectemp14_app                        0.0s 
+[*] Iniciant el contenidor amb accés complet a la xarxa i X11...
+```
+
+Seguint aquests passos l'aplicació amb interfície gràfica serà executada i es veurà així:
+<p align="center"><img src="Imatges/poc.gif"></p> 
 
 Observem apartat per apartat el codi que hem fet servir per aconseguir aquest resultat...
  
