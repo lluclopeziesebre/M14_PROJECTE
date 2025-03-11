@@ -4,7 +4,7 @@
 <p align="center"><img src="Imatges/pngegg.png"></p>
 
 
-## Índex
+## 🔖 Índex
 
 1. **Fase de reconeixement**  
    1.1 [Shodan API](#shodan-api)  
@@ -20,8 +20,9 @@
    3.1 [Telegram Bot](#telegram-bot)  
    3.2 [Docker Container](#docker-container)  
 
+<br>
 
-## Introducció
+## 📖 Introducció
 
 Aquest projecte inclou una eina principal per a l'automatització d'auditories, desenvolupada en Python 3 i desplegable amb Docker. Està disponible tant en mode gràfic com en consola per oferir més comoditat a l'usuari.
 
@@ -82,9 +83,11 @@ $ ~/M14_PROJECTE$ sudo bash run_tool.sh
 Seguint aquests passos l'aplicació amb interfície gràfica serà executada i es veurà així:
 <p align="center"><img src="Imatges/poc.gif"></p> 
 
-Observem apartat per apartat el codi que hem fet servir per aconseguir aquest resultat...
+**Observem apartat per apartat el codi que hem fet servir per aconseguir aquest resultat...**
  
-## Fase de reconeixement
+ <br>
+
+## 🔎 Fase de reconeixement
 ### Shodan API
 En aquesta secció es descriu com interactuar amb l'**API de Shodan** per obtenir informació sobre dispositius i serveis exposats a Internet.
 
@@ -141,7 +144,7 @@ En aquesta secció es descriu com interactuar amb l'**API de Shodan** per obteni
 ---
 
 ### The Harvester
-### Funcions: 
+#### Funcions theHarvester: 
 
 - `obrir_theHarvester`
 
@@ -181,9 +184,7 @@ En aquesta secció es descriu com interactuar amb l'**API de Shodan** per obteni
 
 ### OSINT
 
-A continuació es descriuen les eines OSINT disponibles al projecte mitjançant la funció `obrir_osint`, amb més detall sobre les seves característiques, paràmetres i sortida.
-
-
+A continuació es descriuen les eines OSINT disponibles al projecte, amb més detall sobre les seves característiques, paràmetres i sortida.
 
 #### 1. **ExifTool**
 - **Descripció**: 
@@ -304,9 +305,9 @@ A continuació es descriuen les eines OSINT disponibles al projecte mitjançant 
 
 <p align="center"><img src="Imatges/2025-03-10_16-57_1.png"></p>
 
+<br>
 
-
-## Auditoria de serveis
+## ⚖️ Auditoria de serveis
 ### Nmap
 En aquesta secció es descriuen les funcions que interactuen amb **Nmap** per realitzar diferents tipus d'escaneigs de xarxes i vulnerabilitats.
 
@@ -417,7 +418,9 @@ En aquesta secció es descriuen les funcions que interactuen amb **Nmap** per re
 ---
 
 ### SSH-Audit
-#### Funció: `obrir_ssh`
+#### Funcions SSH-Audit: 
+
+- `obrir_ssh`
 
 - **Descripció**:
   Aquesta funció obre una nova finestra en la interfície gràfica per permetre a l'usuari introduir una IP i un port per auditar el servei SSH a través de l'eina `ssh-audit`. Mostra els resultats de l'auditoria a la finestra de resultats de l'aplicació.
@@ -464,9 +467,9 @@ En aquesta secció es descriuen les funcions que interactuen amb **Nmap** per re
 
 <p align="center"><img src="Imatges/2025-03-10_16-30.png"></p>
 
----
+
  
-## Funcionalitats afegides
+## ✨ Funcionalitats afegides
 ### Telegram Bot
 
 Aquest fragment de codi configura i utilitza un **Telegram Bot** per enviar missatges als usuaris i gestionar les comunicacions en temps real.
@@ -536,7 +539,7 @@ Gestiona l'enviament de missatges grans (més de 4096 caràcters) dividint-los e
 
 #### Runtool.sh
 
-El script `RunTool.sh` és un script en Bash que facilita la creació de la imatge Docker i l'execució del contenidor amb les configuracions adequades per a l'entorn gràfic i de xarxa.
+ `RunTool.sh` és un script en Bash que facilita la creació de la imatge Docker i l'execució del contenidor amb les configuracions adequades per a l'entorn gràfic i de xarxa.
 
 - **Descripció**:
 Aquest script realitza diverses tasques per configurar i executar el contenidor Docker de manera eficaç. Inclou la comprovació si **Docker** està instal·lat, la configuració de les variables d'entorn per a **X11** (necessàries per a la interfície gràfica), i l'execució del contenidor amb permisos de xarxa i accés gràfic.
