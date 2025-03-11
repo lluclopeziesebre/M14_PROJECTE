@@ -1,7 +1,7 @@
 <h1 align="center">PROJECTE ASIX-MP14 GRUP 4</h1>
 <p align="center">Projecte realitzat per 
     <a href="https://github.com/arnauserrasoriano" target="_blank">Arnau Serra</a>, 
-    <a href="" target="_blank">Svyatoslav Leshchuck</a> i 
+    <a href="https://github.com/sleshchuc" target="_blank">Svyatoslav Leshchuck</a> i 
     <a href="https://github.com/lluclopeziesebre" target="_blank">Lluc López</a>.
 </p>
 
