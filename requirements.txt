@@ -10,3 +10,4 @@ sublist3r
 aiohttp_socks
 tk
 ttkbootstrap
+geoip2
