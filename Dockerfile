@@ -15,6 +15,9 @@ RUN apt-get update && apt-get install -y \
 # Copiar els arxius del projecte al contenidor
 COPY . /app/
 
+# Configurar Git per evitar errors amb HTTP/2
+RUN git config --global http.version HTTP/1.1
+
 # Clonar enum4linux i theHarvester
 RUN git clone https://github.com/portcullislabs/enum4linux.git /app/enum4linux
 RUN git clone https://github.com/s0md3v/Photon.git /app/Photon
